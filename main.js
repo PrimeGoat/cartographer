@@ -66,14 +66,12 @@ const titleCaseNames = function(arr) {
   return arr.map(changeToTitleCase);
 }
 
+const doubleIfIndex = function(value, i) {
+  return (i % 2 != 0) ? value * 2 : value;
+}
+
 const doubleEveryOther = function(arr) {
-  let out = [];
-
-  for(let i = 0; i < arr.length; i++) {
-    out.push((i % 2 != 0) ? arr[i] * 2 : arr[i]);
-  }
-
-  return out;
+  return arr.map(doubleIfIndex);
 }
 
 /********************************
